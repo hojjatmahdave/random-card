@@ -17,17 +17,12 @@ const Card = ({ index, item }: Props) => {
       key={index}
       className="rounded-xl shadow-xl p-4 m-4 bg-gradient-to-r from-blue-800 to-indigo-900 w-96 flex flex-row items-center hover:scale-105 transition-all border-2 border-solid border-blue-500 hover:border-blue-400 hover:from-indigo-900 hover:to-blue-800 cursor-pointer"
     >
-      {item.image.length == 0 ? (
-        <p className="self-start bg-pink-400 w-20 h-20 rounded-full flex items-center justify-center text-4xl text-blue-100  border-2 border-solid border-cyan-300">
-          {item.name[0]}{" "}
-        </p>
-      ) : (
-        <img
-          src="src/assets/profileImages/alireza.jpg"
-          alt="personal image"
-          className="self-start w-20 rounded-full border-2 border-solid border-cyan-300"
-        />
-      )}
+      <p
+        className={`self-start bg-slate-800 w-20 h-20 rounded-full flex items-center justify-center text-4xl text-blue-100  border-2 border-solid border-cyan-300`}
+      >
+        {item.name[0]}{" "}
+      </p>
+
       <div className="flex flex-col justify-center font-mono ml-4">
         <h2 className="text-xl"> {item.name}</h2>
         <p>Stack: {item.stack}</p>

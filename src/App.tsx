@@ -8,6 +8,7 @@ const App = () => {
     const randomNum = Math.floor(Math.random() * 13) + 1;
     setRandom(randomNum);
   };
+
   return (
     <div className="flex flex-col items-center justify-start bg-gradient-to-tr pt-20 pl-32 pr-32 pb-5 text-white from-violet-600 to-indigo-600 h-full w-full">
       <header>
@@ -15,7 +16,7 @@ const App = () => {
       </header>
       <main className="grid grid-cols-4 gap-2 my-10">
         {data.map((item, index) => {
-          return <Card index={index} item={item} />;
+          return <Card index={index} item={item} key={index} />;
         })}
       </main>
       <button
@@ -34,7 +35,7 @@ const App = () => {
           Please click the button to show the random Card
         </p>
       ) : (
-        <Card index={random} item={data[random]} />
+        <Card index={random} item={data[random - 1]} />
       )}
       <Footer />
     </div>
