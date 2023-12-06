@@ -23,7 +23,7 @@ const Card = ({ index, item }: Props) => {
         </p>
       ) : (
         <img
-          src={item.image}
+          src="src/assets/profileImages/alireza.jpg"
           alt="personal image"
           className="self-start w-20 rounded-full border-2 border-solid border-cyan-300"
         />
